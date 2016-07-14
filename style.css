@@ -36,7 +36,6 @@ body{background-color:#fff;color:#333}
 
 background-size:100% auto;}
 
-.sticky{background-image: url(img/top-bg.jpg);background-position:0 -48px;background-size:100% auto;}
 
 .m-nav{height:62px;background-color:#e5e5ec;}
 .m-nav > ul{ display: -webkit-box;padding-top:14px;}
@@ -107,10 +106,16 @@ left:50%;margin-left:-50px;top:16px;}
 
 
 /*单个tag列表*/
-.full-tit{height: 44px;line-height: 44px;padding-left: 8px;overflow: hidden;}
+.full-tit{padding-bottom: 10px;height: 44px;line-height: 44px;padding-left: 8px;overflow: hidden;border-bottom:1px solid #e8e8e8}
 .full-tit h2{font-size:18px;float: left;}
 .full-tit .share-items{float: left;height: 44px;padding-left:20px;}
-.share-icon{margin-top: 4px;float: left;width:36px;height: 36px;background:#090;margin-right:10px;}
+.share-icon{margin-top: 4px;float: left;margin-right:10px;-webkit-background-size:cover;
+background-size:cover;}
+
+.share-icon.fb{width:32px;height: 32px;background-image: url(img/slice/share-fb.png);}
+.share-icon.tw{width:32px;height: 32px;background-image: url(img/slice/share-tw.png);}
+.share-icon.in{width:32px;height: 32px;background-image: url(img/slice/share-in.png);}
+.share-icon.gp{width:32px;height: 32px;background-image: url(img/slice/share-gp.png);}
 
 /* quote 列表 */
 .m-quote-list{position: relative;overflow: hidden;}
@@ -242,7 +247,10 @@ left:50%;margin-left:-50px;top:16px;}
   .zm-index-box.fixed a{display: block;width: 14px;height: 14px;line-height: 14px;margin:1px 0;font-size:10px;}
 }
 
-.sticky{top:0;}
+
+/*sticky 头部*/
+.sticky{top:0;width: 100%;z-index: 100;overflow: hidden;background-image: url(img/top-bg.jpg);background-position:0 -48px;background-size:100% auto;}
+
 .fixedsticky {
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -266,3 +274,14 @@ left:50%;margin-left:-50px;top:16px;}
   display: block;
 }
 
+/*分页*/
+.m-paginator{padding:20px 10px 10px;}
+.pure-paginator .pure-button{font-size: 12px;border-radius:5px;margin-right:2px;width: 28px;height: 28px;line-height: 28px;padding: 0;background-color:#fff;border:1px solid #e8e8ec;}
+.pure-paginator .pure-button:hover{background:#eee;text-decoration: none;}
+.pure-paginator .pure-button.pure-button-active{box-shadow:none;background-color:#6865a1;color:#fff;}
+.pure-paginator .pure-button.prev,
+.pure-paginator .pure-button.next{font-size: 14px;}
+.pure-paginator .pure-button-disabled{opacity:.8 }
+.pure-paginator .pure-button-disabled:hover{background-color:#fff;}
+
+.m-paginator.bottom{clear: both;}
