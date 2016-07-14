@@ -28,8 +28,11 @@
     if (MobileUA.SMART_PHONE) {  
         // 移动端链接地址  
       
-      topNavSticky();
-      zmIndexSticky();
+      // topNavSticky();
+      if($(".zm-index-box").length){
+         zmIndexSticky();
+      }
+     
      	
     };
 

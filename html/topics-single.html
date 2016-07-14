@@ -9,34 +9,35 @@
 <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
 </head>
 <body>
-<div class="m-top" id="topNav">	
-	<div class="sticky">
+
+
 		<header class="m-header">
 			<h1 class="m-logo">LOGO</h1>
 
 		</header>
-		<nav class="m-nav">
-			<ul>
-				<li class="active"><a href="#">Authors</a></li>
-				<li><a href="#">Topics</a></li>
-				<li><a href="#">Popular</a></li>
-			</ul>
-		</nav>
-		<div class="m-search">
-			<div class="inner">
-				<div class="input-wp">
-				<input type="text" class="search-input" placeholder="Search for quotes...">
-				</div>
-				<div class="btn-wp">
-					<input type="submit" class="search-icon">
+
+		<div class="sticky fixedsticky" id="topSticky">
+			<div class="m-search">
+				<div class="inner">
+					<div class="input-wp">
+					<input type="text" class="search-input" placeholder="Search for quotes...">
+					</div>
+					<div class="btn-wp">
+						<input type="submit" class="search-icon">
+					</div>
 				</div>
 			</div>
+			<nav class="m-nav">
+				<ul>
+					<li class="active"><a href="#">Authors</a></li>
+					<li><a href="#">Topics</a></li>
+					<li><a href="#">Popular</a></li>
+				</ul>
+			</nav>
+
 		</div>
-	</div>
-	<div class="holder">
-		
-	</div>
-</div>
+
+
 <div class="m-ads-1">
 	<img src="http://placehold.it/728x90" alt="">
 </div>
@@ -145,6 +146,7 @@
 </footer>
 <script src="../js/jquery-3.1.0.min.js"></script>
 <script src="../js/masonry.min.js"></script>
+<script src="../js/fixedsticky.js"></script>
 <script src="../js/main.js"></script>
 <script>
 	$(function(){  
@@ -153,7 +155,9 @@
     itemSelector : '.quote-item',  
     singleMode:true
 
-  });  
+  }); 
+
+  $("#topSticky").fixedsticky(); 
 });
 </script>
 </body>
